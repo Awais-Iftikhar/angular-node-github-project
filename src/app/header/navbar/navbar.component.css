@@ -1,0 +1,14 @@
+.bg-light{
+  background-color: #673ab7 !important;
+}
+.navbar-nav {
+  padding-left: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  padding: 0 16px;
+}
