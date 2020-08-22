@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <mat-spinner *ngIf="isloading" style="position: absolute; top: 40%;"></mat-spinner>
+</div>
+<div class="container"  *ngFor="let userdata of userdata">
+  <div class="card card-body mt-3">
+    <div class="row ">
+        <div class="col-md-3 col1">
+        <img  class="img-fluid" [src]="userdata.profileurl">
+        </div>
+        <div class="col-md-9 col2 badges">
+          <button mat-flat-button color="primary"
+          [matBadge]="userdata.publicrepos" matBadgePosition="after" matBadgeColor="accent">Public repos
+          </button>
+
+          <button mat-raised-button style="background-color: blue;"
+          [matBadge]="userdata.gists" matBadgePosition="after" matBadgeColor="accent" class="ml-3">Gists
+          </button>
+
+          <button mat-raised-button style="background-color: grey;"
+          [matBadge]="userdata.followers" matBadgePosition="after" matBadgeColor="accent" class="ml-3">Followers
+          </button>
+
+          <button mat-raised-button style="background-color: black;"
+          [matBadge]="userdata.following" matBadgePosition="after" matBadgeColor="accent" class="ml-3">Following
+          </button>
+
+
+        <ul class="list-group mt-4">
+          <li class="list-group-item">Node ID: {{ userdata.nodeid}}</li>
+        <li class="list-group-item">Type: {{ userdata.type}}</li>
+        <li class="list-group-item">Bio: {{userdata.bio }}</li>
+        <li class="list-group-item">Location: {{userdata.location}}</li>
+        <li class="list-group-item">Member Since: {{ userdata.created |  date: 'short'}}</li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</div>
