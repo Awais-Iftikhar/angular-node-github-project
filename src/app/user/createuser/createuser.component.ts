@@ -19,11 +19,17 @@ userform: FormGroup;
       name : new FormControl(null, Validators.required),
     });
   }
+  updatesearch(e) {
+    if (e.target.value === '') {
+      this.userdata = undefined;
+     }
+  }
   getname() {
     return this.userform.get('name');
   }
   add(form) {
     if (form.invalid) {
+      this.service.alert('user name is required' , 'alert alert-danger mt-2');
       return;
     }
     this.service.getgithubuser(form.value.name);
