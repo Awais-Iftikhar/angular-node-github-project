@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  githubclientid: 'your_github_client_id',
+  githubclientsecret: 'your_github_secret_key',
+  apiurl: 'https://githubrestapis.herokuapp.com/api',
+
 };
 
 /*
