@@ -5,11 +5,12 @@
 
       <div class="form-group">
         <label for=""><h3>Search Github Users</h3></label>
-        <input type="text" class="form-control" placeholder="username" formControlName = 'name'  >
+        <input type="text" class="form-control" placeholder="username" formControlName = 'name' (keyup)="updatesearch($event)" >
       </div>
 
-
-      <button class="btn btn-primary" type="submit" >Search user</button>
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit" >Search user</button>
+      </div>
     </form>
   </div>
 </div>
@@ -46,5 +47,7 @@
         </div>
     </div>
     </div>
-    <button class="btn btn-primary mt-2" (click)="alldata(userdata)">Register User</button>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary mt-2 mb-4" (click)="alldata(userdata)">Register User</button>
+    </div>
 </div>
